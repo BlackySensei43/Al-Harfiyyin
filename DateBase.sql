@@ -13,10 +13,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `if0_38826690_al_harfiyyin`
---
-
 -- --------------------------------------------------------
 
 --
@@ -31,10 +27,6 @@ CREATE TABLE `craftsmen_profiles` (
   `experience_years` int(11) DEFAULT NULL,
   `hourly_rate` decimal(10,2) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `craftsmen_profiles`
---
 
 INSERT INTO `craftsmen_profiles` (`id`, `user_id`, `profession`, `description`, `experience_years`, `hourly_rate`) VALUES
 (1, 1, 'سباك', 'سباك', 5, NULL);
@@ -55,14 +47,6 @@ CREATE TABLE `messages` (
   `post_id` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `sender_id`, `receiver_id`, `message`, `is_read`, `created_at`, `post_id`) VALUES
-(1, 2, 1, 'test', 1, '2025-05-01 15:41:31', NULL),
-(2, 1, 2, 'test', 1, '2025-05-01 15:44:31', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -79,13 +63,6 @@ CREATE TABLE `posts` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `craftsman_id`, `title`, `description`, `price`, `images`, `created_at`) VALUES
-(2, 1, 'test', 'test', '1000.00', '[\"assets\\/uploads\\/posts\\/6813a79caef55_test.jpeg\"]', '2025-05-01 16:55:56');
-
 -- --------------------------------------------------------
 
 --
@@ -98,13 +75,6 @@ CREATE TABLE `reviews` (
   `client_id` int(11) NOT NULL,
   `rating` int(11) NOT NULL
 ) ;
-
---
--- Dumping data for table `reviews`
---
-
-INSERT INTO `reviews` (`id`, `craftsman_id`, `client_id`, `rating`, `comment`, `created_at`) VALUES
-(1, 1, 2, 4, 'test', '2025-05-01 16:26:52');
 
 -- --------------------------------------------------------
 
@@ -124,10 +94,6 @@ CREATE TABLE `users` (
   `profile_pic` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `craftsmen_profiles`
@@ -158,10 +124,6 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`),
   ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `craftsmen_profiles`
