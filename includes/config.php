@@ -1,10 +1,10 @@
 <?php
 ob_start();
 
-$db_host = 'sql207.infinityfree.com';
-$db_user = 'if0_38826690';
-$db_pass = 'HBjtMmCKtGBV';
-$db_name = 'if0_38826690_al_harfiyyin';
+$db_host = '';
+$db_user = '';
+$db_pass = '';
+$db_name = '';
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
