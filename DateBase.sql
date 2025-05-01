@@ -1,10 +1,5 @@
 -- phpMyAdmin SQL Dump
 -- version 4.9.0.1
--- https://www.phpmyadmin.net/
---
--- Host: sql207.infinityfree.com
--- Generation Time: May 01, 2025 at 12:58 PM
--- Server version: 10.6.19-MariaDB
 -- PHP Version: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
